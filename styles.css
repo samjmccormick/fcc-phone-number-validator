@@ -1,0 +1,111 @@
+/* variables */ 
+
+:root {
+	--dark-green: #001A04;
+	--cyan: #12ACBD;
+	--dark-gray: #272726;
+	--light-gray: #626160;
+	--middle-gray: #50504e;
+}
+
+/* universal styling */ 
+
+body {
+	font-size: 16px;
+	color: white;
+	background-color: var(--dark-green);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-content:center; 
+	margin: 0;
+}
+
+h1  {
+	font-weight: bold;
+	font-size: 3.0rem;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 10px 0;
+}
+
+/* phone styling */
+
+#phone-div {
+	height: 550px;
+	width: 250px;
+	background-color: var(--cyan);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content:center; 
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+#screen-div {
+	height: 530px;
+	width: 230px;
+	background-color: var(--light-gray);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+#results-div {
+	height: 430px;
+	width: 230px;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
+	margin: 0 auto;
+	background-color: var(--dark-gray);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+/*input styling */
+
+input {
+	background-color: var(--light-gray);
+	color: white;
+	border-style: none;
+	width: 90%;
+	height: 30px;
+	margin: 0 auto;
+	border-bottom-style: solid;
+	border-bottom-color: var(--middle-gray);
+}
+
+input::placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+input:focus {
+	outline: none;
+	
+}
+
+/* button styling */
+
+#button-div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 4px;
+}
+
+button {
+	width: 75px;
+	height: 60px;
+	border-radius: 30px;
+	border-style: none;
+	background-color: var(--dark-gray);
+	color:white;
+	font-weight: bold;
+}
