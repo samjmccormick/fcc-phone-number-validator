@@ -29,17 +29,29 @@ function isValid (num) {
 	return validPhoneNumbers.some((regex) => regex.test(num));
 }
 
-/* need to either figure out append child, add innerHTML maybe? */
-resultsDiv.appendChild(document.createElement("p").setAttribute("class", "results").innerHTML);
+function clearResults () {
+	 userInput.value = "";
+	 resultsDiv.innerHTML = "";
+}
+
+/* need to either figure out append child, add innerHTML maybe?
+I think I can just update the innerHTML of the resultsDiv and use the += to continually update it, need to change flex on restults so that its normal column
+but starts at flex-end */
+
 
 function checkUserInput (input) {
 	if (input === "") {
 		alert("Please provide a phone number") 
 	} else if (isValid(input)) {
-		resultsDiv.appendChild(``)
+		resultsDiv.innerHTML += `<p class="results">Valid US number: ${input}</p>`;
+	} else {
+		resultsDiv.innerHTML += `<p class="results">Invalid US number: ${input}</p>`
 	}
+	userInput.value = "";
 }
 
 /* for the clear function I think I can just set the innerHTML of the resutlsDiv to an empty string and that will clear it */
 
 checkBtn.addEventListener("click", () => {checkUserInput(userInput.value)});
+
+clearBtn.addEventListener("click", () => {clearResults()});
