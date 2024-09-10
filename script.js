@@ -40,6 +40,6 @@ function checkUserInput (input) {
 	}
 }
 
-
+/* for the clear function I think I can just set the innerHTML of the resutlsDiv to an empty string and that will clear it */
 
 checkBtn.addEventListener("click", () => {checkUserInput(userInput.value)});
